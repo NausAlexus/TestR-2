@@ -13,7 +13,8 @@
 
     <script src="/burgerMenu.js" defer></script>
     <script src="/header.js" defer></script>
-    <script src="popUp.js" defer></script>
+    <script src="/popUp.js" defer></script>
+    <script src="/howToPlay.js" defer></script>
 
 
 </head>
@@ -51,6 +52,235 @@
     </header>
 
     <main class="how-play-content">
+
+      <section class="how-to-play">
+        <div class="container how-to-play-container">
+          <div class="how-to-play-sidebar">
+            <ul class="how-to-play-nav">
+              <li class="how-to-play-nav-item active" data-tab="overview">
+                <button class="how-to-play-nav-button">Game Overview</button>
+              </li>
+              <li class="how-to-play-nav-item" data-tab="sequences-sets">
+                <button class="how-to-play-nav-button">Formation of Sequences & Sets</button>
+              </li>
+              <li class="how-to-play-nav-item" data-tab="rummy-strategies">
+                <button class="how-to-play-nav-button">Winning Strategies</button>
+              </li>
+              <li class="how-to-play-nav-item" data-tab="quick-tips">
+                <button class="how-to-play-nav-button">Quick Tips</button>
+              </li>
+              <li class="how-to-play-nav-item" data-tab="history">
+                <button class="how-to-play-nav-button">History of Card Games</button>
+              </li>
+              <li class="how-to-play-nav-item" data-tab="app-download">
+                <button class="how-to-play-nav-button">Download App</button>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="how-to-play-content">
+            <!-- Game Overview Tab -->
+            <div class="how-to-play-tab-content active" id="overview">
+              <h1 class="how-to-play-title">How to Master Rummy</h1>
+              <img src="/img/howToPlay/how1.jpg" alt="Rummy Game">
+              <p class="how-to-play-description">
+                Rummy is a strategic card game that demands players to craft valid sequences and sets from their 13-card hand. The primary objective is to minimize points by getting rid of high-value cards and forming a complete hand using tactical play and astute decision-making. Typically played with two decks of cards including two Jokers, let’s examine the details:
+              </p>
+              <ul class="how-to-play-list">
+                <li><strong>Number of Players:</strong> 2 to 6 players</li>
+                <li><strong>Objective:</strong> Create two sequences, where one must be pure. A valid sequence can be created with or without a Joker, while sets are used to complete your hand.</li>
+                <li><strong>Card Setup:</strong> Each player receives 13 cards from either a closed deck or the open pile. Strategic exchanges are made to complete sequences and sets.</li>
+                <li><strong>Game Rounds:</strong> The game proceeds turn by turn; each player draws from the deck or the open pile before discarding to retain 13 cards.</li>
+                <li><strong>Pure Sequences and Sets:</strong> A sequence comprises three or more consecutive cards of the same suit. A pure sequence does not include Jokers, whereas a set consists of three or four cards sharing the same rank but being of different suits.</li>
+                <li><strong>Jokers:</strong> Jokers serve as wild cards and can replace any card to complete a sequence or set. However, incorporating a Joker in a pure sequence invalidates it.</li>
+              </ul>
+              <p class="how-to-play-description">
+                Success in Rummy hinges on balancing offense with defense. As you work to complete your own hand, it's critical to monitor your opponents' moves. Understanding their strategies and their discards can significantly impact your chances of victory.
+              </p>
+              <h3 class="how-to-play-section-title">Fundamental Rules</h3>
+              <ul class="how-to-play-list">
+                <li><strong>First Drop vs. Middle Drop:</strong> A player exiting the game without forming valid sequences incurs a "first drop," while a player leaving after making some moves results in a "middle drop," which carries a higher penalty.</li>
+                <li><strong>Declaring the Game:</strong> A player may announce the end of the game once they have formed all required sequences and sets. This declaration must coincide with their turn, concluding with a discard.</li>
+                <li><strong>Scoring:</strong> Post-declaration, points are calculated based on remaining unmelded cards, with high cards like Jacks and Aces carrying more weight than numbered cards.</li>
+              </ul>
+              <p class="how-to-play-description">
+                Rummy is a skill-centric game, not a mere game of chance! The first player to successfully organize their hand into legal sequences and sets with at least one pure sequence emerges victorious. Each round concludes with a declaration, paving the way for fresh strategies in the following round.
+              </p>
+              <h3 class="how-to-play-section-title">Advanced Tips</h3>
+              <img src="/img/howToPlay/how2.jpg" alt="Rummy Tips">
+              <ul class="how-to-play-tips list-reset">
+                <li>Stay vigilant about the cards your opponents select and dispose of; understanding their strategy is vital.</li>
+                <li>Curb your retention of high-value cards (Jacks, Queens, Kings, and Aces); they can balloon your score if your opponent declares first.</li>
+                <li>If a pure sequence remains elusive early on, shift your focus to forming sets. They can be completed more easily with Jokers.</li>
+                <li>Sometimes bluffing can provide a strategic advantage; discarding misleading cards may help you maintain an upper hand.</li>
+              </ul>
+              <p class="how-to-play-description">
+                Becoming proficient at Rummy will enhance your gaming experience and sharpen your strategic sense. Regardless of whether you engage casually or in competitive play, Rummy's complexities and excitement await you.
+              </p>
+            </div>
+            
+            <!-- Sequence & Set Formation Tab -->
+            <div class="how-to-play-tab-content" id="sequences-sets">
+              <h2 class="how-to-play-title">Formation of Sequences & Sets</h2>
+              <img src="/img/howToPlay/how3.jpg" alt="Formation Examples">
+              <p class="how-to-play-description">
+                Building sequences and sets is essential for victory in Rummy. Mastering their formation and understanding when to apply them strategically can offer a decisive edge. Here's how sequences and sets are constructed:
+              </p>
+              
+              <h3>Sequences</h3>
+              <p class="how-to-play-description">
+                A sequence consists of three or more consecutive cards of the same suit and serves as the backbone of your hand. Familiarize yourself with two primary types:
+              </p>
+              
+              <h4>1. Pure Sequence</h4>
+              <p class="how-to-play-description">
+                A pure sequence is formed with consecutive cards of the same suit, excluding Jokers. This sequence type holds the greatest value in the game as it doesn’t rely on wild cards and is crucial for declaring.
+              </p>
+              <ul class="how-to-play-list">
+                <li>Example: 5♥ 6♥ 7♥</li>
+                <li>Example: 3♠ 4♠ 5♠ 6♠</li>
+              </ul>
+            
+              <h4>2. Impure Sequence</h4>
+              <p class="how-to-play-description">
+                An impure sequence includes consecutive cards but features one or more Jokers. While still valid, these sequences are less desirable than pure sequences due to their reliance on wild cards.
+              </p>
+              <ul class="how-to-play-list">
+                <li>Example: 6♦ 7♦ Q♠ 9♦ (where Q♠ acts as a Joker)</li>
+                <li>Example: 5♠ Q♥ 7♠ 8♠ (with a printed Joker)</li>
+              </ul>
+              <p class="how-to-play-description">
+                While impure sequences can aid in completing your hand, they should be utilized wisely, particularly when aiming to create your second sequence.
+              </p>
+              
+              <h3>Sets</h3>
+              <p class="how-to-play-description">
+                A set combines three or more cards bearing the same rank but different suits. Sets play a crucial role in finalizing your hand but require careful thought.
+              </p>
+              <ul class="how-to-play-list">
+                <li>Example: A♥ A♠ A♦</li>
+                <li>Example: 8♦ 8♠ 8♥</li>
+              </ul>
+              
+              <p class="how-to-play-description">
+                To form a valid set, ensure that the cards come from different suits, preventing redundant cards of the same suit. This approach broadens your chances of completing sets. Unlike sequences, the order of cards in a set does not matter.
+              </p>
+              
+              <h3>Building Your Hand</h3>
+              <p class="how-to-play-description">
+                To effectively build your hand, prioritize forming a pure sequence early on. This foundation will facilitate the completion of the rest of your hand. Next, target the creation of sets and impure sequences, utilizing Jokers to fill gaps. 
+              </p>
+              
+              <p class="how-to-play-description">
+                Keep a vigilant watch on your opponents’ actions as well. Picking cards they discard can significantly benefit you. However, exercise caution, as selecting cards from the open pile may inadvertently disclose your plans.
+              </p>
+            </div>
+            
+            <!-- Rummy Strategies Tab -->
+            <div class="how-to-play-tab-content" id="rummy-strategies">
+              <h2 class="how-to-play-title">Winning Strategies for Rummy</h2>
+             
+              <p class="how-to-play-description">
+                Achieving victory in Rummy hinges on strategy rather than luck alone. While a strong hand is advantageous, how you play can tilt the game in your favor. Here are essential strategies to stay ahead:
+              </p>
+              
+              <h3>1. Prioritize Your Pure Sequence</h3>
+              <p class="how-to-play-description">
+                Aim to complete your pure sequence as swiftly as possible—it forms the bedrock of your hand and is vital for declaring. Without it, you place yourself at a significant disadvantage. Forming this sequence early allows you to concentrate on the rest of your hand without time pressure.
+              </p>
+            
+              <h3>2. Discard Unnecessary High-Point Cards</h3>
+              <p class="how-to-play-description">
+                Cards with high values, such as Aces, Kings, Queens, and Jacks, should be discarded if not part of a sequence or set to minimize your total points. Retaining these cards can be detrimental if your opponent declares before you do. Strategize their discarding especially when you're far from completing your hand.
+              </p>
+            
+              <h3>3. Monitor Discarded Cards</h3>
+              <p class="how-to-play-description">
+                Maintain awareness of discarded cards from your opponents. This will provide insight into their strategies and allow you to adapt accordingly. If others discard cards crucial to your hand, approach their acquisition with caution.
+              </p>
+            
+              <h3>4. Use Jokers Judiciously</h3>
+              <p class="how-to-play-description">
+                Jokers are formidable tools that can facilitate sequences or sets. Avoid relying on them excessively; utilize them when truly necessary. Remember that you cannot form a pure sequence using Jokers. Therefore, focus on your pure sequence first and deploy Jokers for flexible play in impure sequences.
+              </p>
+              
+              <h3>5. Analyze Opponents’ Patterns</h3>
+              <p class="how-to-play-description">
+                Observe the cards selected or discarded by your rivals. Understanding their patterns can reveal strategic insights that may benefit your play. If someone consistently picks cards from the open pile, it could indicate they are close to completing their sequences or sets.
+              </p>
+            
+              <h3>6. Maintain a Flexible Hand</h3>
+              <p class="how-to-play-description">
+                Flexibility in Rummy is crucial. Don’t adhere strictly to your initial plan. If circumstances shift, adapt your strategy accordingly. This might require switching from sets to sequences or altering your preferred suits. The more versatile your approach, the better your chances of success.
+              </p>
+              
+              <h3>7. Conceal Your Strategy</h3>
+              <p class="how-to-play-description">
+                Keep your strategy veiled for a while. Should you reveal your hand prematurely by picking obvious cards, your opponents gain an advantage. Exercise subtlety with your moves to keep them guessing.
+              </p>
+            </div>
+            
+            <!-- Quick Tips Tab -->
+            <div class="how-to-play-tab-content" id="quick-tips">
+              <h2 class="how-to-play-title">Quick Tips for Success</h2>
+              <img src="/img/howToPlay/how5.jpg" alt="Quick Tips" style="width: 100%;">
+              <ul class="how-to-play-tips list-reset">
+                <li>Form your pure sequence early to establish a solid foundation for your hand. Without it, you won't have the ability to declare.</li>
+                <li>Adapt your strategy as necessary. Be ready to pivot based on incoming cards and the actions of your opponents.</li>
+                <li>Avoid picking cards from the discard pile unless it is imperative. Doing so may expose your hand to opponents.</li>
+                <li>Dispose of high-point cards such as Aces, Kings, and Queens when they don't contribute to a sequence, as these can quickly accumulate points if the game closes unexpectedly.</li>
+                <li>Exercise boldness, but always weigh potential outcomes before taking risks. Calculated decisions could produce favorable results.</li>
+                <li>Closely track discarded cards to gauge the status of the remaining deck and anticipate your opponents' strategies.</li>
+                <li>Remember, it’s not solely about quickly finishing your hand—accuracy in forming valid sequences and sets will determine your edge.</li>
+                <li>Stay aware of your opponents’ moves; if they drop cards that could aid you, leverage that information.</li>
+              </ul>
+            </div>
+            
+            <!-- History of Card Games Tab -->
+            <div class="how-to-play-tab-content" id="history">
+              <h2 class="how-to-play-title">The History of Card Games in India</h2>
+              <p class="how-to-play-description">
+                The heritage of card games in India is extensive and varied, originating centuries ago. Games like Ganjifa, played with exquisitely crafted handmade cards, captivated royalty in Mughal courts and princely states. These not only served as entertainment but also showcased the rich artistic culture involved in their design.
+              </p>
+              <p class="how-to-play-description">
+                Over time, the culture of card games proliferated throughout India, leading to the emergence of regional variations. Rummy, renowned for its blend of strategy and skill, became particularly popular due to its simplicity and depth of gameplay, making it appealing to players of various ages.
+              </p>
+              <p class="how-to-play-description">
+                Nowadays, Rummy is embraced by millions across India, whether in casual gatherings or formal tournaments. Its popularity spans both urban and rural areas, fostering social interaction and enjoyment among participants. The rise of online platforms has also contributed to Rummy's resurgence, connecting players nationwide and globally.
+              </p>
+              <p class="how-to-play-description">
+                With its rich legacy, strategic depth, and community-oriented atmosphere, Rummy remains a cherished card game in India, evolving to meet modern demands while holding onto its traditional essence.
+              </p>
+            </div>
+            
+            <!-- Download App Tab -->
+            <div class="how-to-play-tab-content" id="app-download">
+              <h2 class="how-to-play-title">Download the RummyZion App</h2>
+              <p class="how-to-play-description">
+                Want to enjoy Rummy on-the-go? Download the RummyZion app for Android and iOS, and experience the thrill of Rummy wherever you are. Whether you’re commuting, relaxing at home, or taking a break at work, play your favorite Rummy games instantly. The app is fast, secure, and designed to facilitate seamless competition with players globally, ensuring an enjoyable experience.
+              </p>
+              <p class="how-to-play-description">
+                With an intuitive interface and smooth performance, the RummyZion app guarantees that you won’t miss any excitement. Participate in daily tournaments, challenge friends, and explore various Rummy variants, all within the convenience of your mobile device. It’s catered to all skill levels, from novices to experts.
+              </p>
+              <img src="/img/howToPlay/how6.jpg" alt="Download App">
+              <p class="how-to-play-description">
+                <strong>Steps to Download:</strong>
+              </p>
+              <ul class="list-reset">
+                  <li>Access the Google Play Store or App Store.</li>
+                  <li>Search for "RummyZion" and click the download button.</li>
+                  <li>Install the app and start enjoying your favorite Rummy variants.</li>
+                  <li>Log in or create an account to join the Rummy community and begin your journey.</li>
+              </ul>
+              <p></p>
+              <a href="/contacts/" class="rummy-hero-btn">Get App Link</a>
+              <p class="how-to-play-description">
+                Download the RummyZion app now and dive into an unparalleled Rummy experience. Don’t miss out on exclusive offers and features available only on the app. Play, win, and savor the strategic joy of Rummy anytime, anywhere!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
 

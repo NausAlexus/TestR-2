@@ -1159,6 +1159,209 @@ body::-webkit-scrollbar-track {
     
   }
 
+.how-play-content{
+    margin: 30px 20px;
+}
+  
+.how-to-play-sidebar {
+    flex: 1;
+    min-width: 280px;
+    
+    color: #ecf0f1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 60px;
+    
+    
+  }
+  
+  .how-to-play-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  
+  .how-to-play-nav-link {
+    display: block;
+    padding: 16px 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #2c3e50;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .rummy-hero-btn{
+    color: rgb(81, 255, 0);
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px 7px;
+    transition: all 0.3s ease-in-out;
+  }
+
+.rummy-hero-btn:hover{
+    background-color:  rgb(81, 255, 0);
+    color: #000000;
+}
+  .how-to-play-nav-link:hover {
+    background-color: white;
+    color: #f1c40f;
+  }
+  
+  .how-to-play-nav-item.active .how-to-play-nav-link {
+    background-color: #388017;
+    color: #fff;
+  }
+  
+  /* Main Content */
+  .how-to-play-main-content {
+    flex: 3;
+    min-width: 700px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .how-to-play-tab-content {
+    display: none;
+  }
+  
+  .how-to-play-tab-content.active {
+    display: block;
+  }
+  
+  .how-to-play-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+  
+  .how-to-play-description {
+    font-size: 20px;
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  
+  .how-to-play-list {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  
+  .how-to-play-list li {
+    margin-bottom: 12px;
+    color: white;
+  }
+  
+  /* Card Examples and Sequences */
+  .how-to-play-examples {
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .how-to-play-examples li {
+    margin-bottom: 10px;
+  }
+  
+  /* Tips Section */
+  .how-to-play-tips {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .how-to-play-tips li {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* Images */
+  .imageCaption {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .imageCaption img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 12px 25px;
+    background-color: #0cb717;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #afd517;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .how-to-play-section {
+      flex-direction: column;
+    }
+  
+    .how-to-play-sidebar {
+      min-width: 100%;
+    }
+  
+    .how-to-play-main-content {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .how-to-play-nav-link {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .how-to-play-section-title {
+      font-size: 28px;
+    }
+  
+    .how-to-play-description {
+      font-size: 18px;
+    }
+  
+    .how-to-play-list li,
+    .how-to-play-examples li {
+      font-size: 16px;
+    }
+  
+    .how-to-play-tips li {
+      font-size: 16px;
+    }
+  }
+
 
 
 
