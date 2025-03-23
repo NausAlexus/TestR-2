@@ -1,0 +1,644 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    background-color: #00741d;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header {
+        padding: 35px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .main-content {
+        margin-top: 80px !important;
+    }
+
+    
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: silver;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px white;
+    background-color: transparent;
+}
+.header {
+    padding: 14px 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #540088;
+    transition: top 0.3s;
+    z-index: 1000;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-shadow: 8px 14px 31px 2px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 8px 14px 31px 2px rgba(0,0,0,0.46);
+    -moz-box-shadow: 8px 14px 31px 2px rgba(0,0,0,0.46);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-link,
+.footer-brand {
+    text-decoration: none;
+    color: #bbff3c;
+    font-weight: 900;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.nav-item {
+    margin-left: 20px;
+}
+.nav-link {
+    font-weight: 100;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 550px) {
+    .nav-item {
+        margin-left: 5px;
+        font-size: 14px;
+    }
+    .nav-link {
+        padding: 2px 5px;
+    }
+}
+
+.nav-list.show {
+    max-height: 100%;
+    opacity: 1;
+    right: 0;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.burger-line {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+@media (max-width: 730px) {
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-item:first-child {
+        margin-top: 20px;
+    }
+
+    .burger-menu {
+        display: flex;
+        margin-right: 15px;
+    }
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+}
+
+.main-content {
+    margin-top: 50px;
+}
+
+.navigation {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 52px;
+    }
+    .navigation {
+        justify-content: space-between;
+    }
+}
+
+.nav-list {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.hide {
+    top: -100px; /* Или любое другое значение, чтобы скрыть хедер */
+}
+
+@media (max-width: 730px) {
+    .burger-menu {
+        display: flex;
+        z-index: 10000;
+    }
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Изменяем на колонку для бокового меню */
+        background-color: #540088;
+        position: fixed; /* Фиксируем меню */
+        top: 0;
+        right: -250px; /* Скрываем за пределами экрана */
+        width: 250px; /* Ширина меню */
+        height: 100%; /* Высота на весь экран */
+        transition: right 0.3s ease; /* Анимация */
+        z-index: 999; /* Указываем z-index */
+        border-left: 4px solid #6aff00;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .nav-list.active {
+        display: flex;
+    }
+    .nav-link-underline {
+        border: none;
+    }
+}
+
+@media (max-width:426px) {
+    
+    .burger-line{
+        background-color: rgb(255, 255, 255);
+    }
+    .main-content{
+        margin-top: 0;
+    }
+    .slider-header{
+        margin-top: 0;
+    }
+    .nav-list{
+        top: 0;
+    }
+    
+}
+
+.footer {
+    background-color: #540088;
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 6px -7px 31px 2px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 6px -7px 31px 2px rgba(0,0,0,0.46);
+    -moz-box-shadow: 6px -7px 31px 2px rgba(0,0,0,0.46);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+.footer-details {
+    margin-bottom: 15px; /* Space between brand and links */
+}
+
+.footer-links {
+    margin-bottom: 15px; /* Space below links */
+}
+
+.footer-links a {
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+    transition: color 0.3s ease;
+}
+
+.warn-18,
+.warn-states {
+    font-size: 14px; /* Set a smaller font size for warnings */
+    margin: 5px 0; /* Space around paragraphs */
+    color: red;
+}
+
+.footer-rights {
+    font-size: 12px; /* Similar size for rights statement */
+    margin-top: 15px; /* Space above this statement */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+    
+    .footer-links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center links */
+    }
+    
+    .footer-links a {
+        margin: 5px 0; /* Space between stacked links */
+    }
+}
+
+.privacy-content {
+    margin-top: 80px;
+}
+.privacy-policy {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff66;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок секции */
+.policy-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffff1c; /* Цвет заголовка */
+}
+
+/* Вводный текст */
+.policy-intro {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Заголовки секций */
+.privacy-policy-section-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #ffff1c;
+}
+
+/* Описание секций */
+.privacy-policy-section-description {
+    margin-bottom: 10px;
+}
+
+/* Списки */
+.privacy-policy-info-list,
+.privacy-policy-purpose-list,
+.privacy-policy-sharing-list,
+.privacy-policy-rights-list {
+    list-style: none;
+    padding: 0;
+}
+
+.privacy-policy-info-item,
+.privacy-policy-purpose-item,
+.privacy-policy-sharing-item,
+.privacy-policy-rights-item {
+    background: #e9ecef;
+    padding: 10px;
+    margin: 8px 0;
+    border-left: 5px solid #540088; /* Цвет полоски */
+    border-radius: 4px;
+}
+
+/* Инструкция по правам */
+.privacy-policy-rights-instruction {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 600px) {
+    .privacy-policy {
+        padding: 15px;
+    }
+
+    .policy-title {
+        font-size: 1.8em;
+    }
+
+    .privacy-policy-section-title {
+        font-size: 1.3em;
+    }
+
+    .policy-intro {
+        font-size: 1em;
+    }
+}
+
+.terms-and-conditions {
+    margin-top: 80px;
+}
+
+.terms-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffff1c; /* Цвет заголовка */
+}
+
+.terms-intro {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.terms-and-conditions-section-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #ffff1c; /* Цвет заголовка секции */
+}
+
+.terms-and-conditions-section-description {
+    margin-bottom: 10px;
+}
+
+.terms-and-conditions-prohibited-activities {
+    list-style: none;
+    padding: 0;
+}
+
+.terms-and-conditions-prohibited-item {
+    background: #e9ecef;
+    padding: 10px;
+    margin: 8px 0;
+    border-left: 5px solid #540088; /* Цвет полоски */
+    border-radius: 4px;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 600px) {
+    .terms-and-conditions {
+        padding: 15px;
+    }
+
+    .terms-title {
+        font-size: 1.8em;
+    }
+
+    .terms-and-conditions-section-title {
+        font-size: 1.3em;
+    }
+
+    .terms-intro {
+        font-size: 1em;
+    }
+}
+
+.resp-game-content {
+    margin-top: 80px;  /* Отступ сверху */
+}
+
+.privacy-policy-info-list,
+.responsible-gaming-gaming-guidelines,
+.responsible-gaming-self-regulation-tools {
+    list-style: none;  /* Убираем маркеры для списка */
+    padding: 0;  /* Убираем отступы */
+}
+
+.faq-content {
+    padding: 30px;
+    margin-top: 70px;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.425);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.faq-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffff1c;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd; /* Разделитель между вопросами */
+    padding: 15px 0;
+    transition: background 0.3s ease; /* Плавный переход фона */
+}
+
+.faq-item:hover {
+    background: rgba(0, 0, 0, 0.111); /* Увеличение контрастности при наведении */
+}
+
+.faq-question {
+    font-size: 1.5em;
+    color: #5e0098; /* Цвет вопроса */
+    cursor: pointer; /* Курсор указывает, что элемент кликабельный */
+    margin: 0; /* Убираем отступы у заголовка */
+}
+
+.faq-answer {
+    display: none; /* Скрываем ответ по умолчанию */
+    font-size: 1.1em;
+    color: #ffffff; /* Цвет текста ответа */
+    margin-top: 10px;
+    transition: all 0.5s ease; /* Плавный переход для анимации */
+    padding-left: 20px; /* Отступ слева для ответов */
+    transform: translateX(20px); /* Сдвиг ответа для создания эффекта выезда */
+    opacity: 0; /* Сделаем ответ невидимым */
+}
+
+/* Стиль для видимого ответа */
+.faq-answer.active {
+    display: block; /* Отображаем ответ */
+    opacity: 1; /* Делаем ответ видимым */
+    transform: translateX(0); /* Убираем сдвиг */
+}
+
+.tournaments-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1400px;
+    margin-top: 70px;
+}
+
+.tournaments-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.tournaments-section p {
+    font-size: 1.4em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.tournaments-card p { 
+    color: rgb(0, 0, 0);
+    font-size: 1.0em;
+}
+
+.tournaments-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tournaments-card {
+    background-color: #b023d0;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s;
+    border: 4px solid yellow;
+}
+
+.tournaments-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.tournaments-card h3 {
+    margin: 10px 0 5px;
+    color: white;
+}
+
+.tournaments-card p {
+    margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+    .tournaments-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .tournaments-card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) {
+    .header-link:hover,
+    .footer-brand:hover {
+        color: #ff1900;
+    }
+    .nav-link:hover {
+        color: #ff1900;
+    }
+    .footer-links a:hover {
+        color: #ff1900;
+    }
+    .tournaments-card:hover {
+        transform: scale(1.05);
+    }
+}
