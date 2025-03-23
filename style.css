@@ -604,18 +604,378 @@ body::-webkit-scrollbar-track {
     }
 }
 
+.parallax-section {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
 
+.parallax-bg {
+    background-image: url('/img/home/hero-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin: 0 auto;
+    max-width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.parallax-main-title {
+    font-size: 48px;
+}
 
+@media (max-width: 768px) {
+    .parallax-main-title {
+        font-size: 28px;
+    }
+}
 
+.number-phone {
+    display: flex; /* Используем Flexbox для выравнивания элементов */
+    align-items: center; /* Центрируем элементы по вертикали */
+    background-size: cover;
+    background-position: center;
+    padding: 30px; /* Уменьшаем отступы */
+    border-radius: 15px;
+    max-width: 800px; /* Увеличиваем максимальную ширину для более широкой формы */
+    margin: auto;
+}
 
+/* Стили для формы */
+.hero__form {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Позволяет форме занимать оставшееся пространство */
+    margin-right: 20px; /* Отступ справа для расстояния от изображения */
+}
 
+/* Стили для телефонного ввода */
+.phone-input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
 
+.phone-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
 
+/* Стили для кнопки */
+.btn-hero {
+    background-color: #ff4081; /* Яркий цвет для кнопки */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin: 10px 0;
+}
+/* Стили для контейнера согласия */
+.hero-flex-cont {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
 
+.checkbox {
+    margin-right: 10px;
+}
 
+/* Стили для текста заметки */
+.hero__note {
+    font-size: 14px;
+    color: #ffffff;
+}
 
+.privacy-link {
+    color: #ff4081;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Стили для ошибок */
+.error {
+    color: #ffcc00;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+.phone-image {
+    width: 300px; /* Ширина изображения */
+    height: auto; /* Обеспечение сохранения пропорций */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .number-phone {
+        flex-direction: column; /* При сужении экрана перейдем на вертикальный макет */
+    }
+
+    .hero__form {
+        margin-right: 0; /* Убираем отступ справа для вертикального макета */
+        margin-bottom: 20px; /* Добавляем отступ снизу */
+    }
+
+    .phone-image {
+        width: 400px; /* Изображение принимает всю ширину на узких экранах */
+        height: auto; /* Сохраняем соотношение сторон */
+        display: block; /* Отображаем изображение */
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 470px) {
+
+    .phone-image {
+        width: 100%; /* Изображение принимает всю ширину на узких экранах */
+    }
+}
+
+.skill-rummy {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.skill-rummy__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skill-rummy__description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.skill-rummy__card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки по умолчанию для больших экранов */
+    gap: 20px; /* Отступы между карточками */
+}
+
+.skill-rummy__card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.skill-rummy__card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill-rummy__card-text {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.skill-rummy__button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+    .skill-rummy__card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для средних экранов */
+    }
+}
+
+@media (max-width: 600px) {
+    .skill-rummy__card-container {
+        grid-template-columns: 1fr; /* 1 колонка для малых экранов */
+    }
+}
+
+.rummyVortex-online {
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.rummyVortex-online-title {
+    font-size: 2.5rem;
+    color: #f4ff1a;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rummyVortex-online-content {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.initialVortex-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.rummyVortex-online-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.rummyVortex-online-button:hover {
+    background-color: #e91e63;
+    transform: scale(1.05);
+}
+.hiddenVortex {
+    display: none;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .rummyVortex-online-title {
+        font-size: 2rem;
+    }
+
+    .initialVortex-paragraph {
+        font-size: 1rem;
+    }
+
+    .rummyVortex-online-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rummyVortex-online {
+        padding: 20px;
+    }
+
+    .rummyVortex-online-title {
+        font-size: 1.5rem;
+    }
+
+    .initialVortex-paragraph {
+        font-size: 0.9rem;
+    }
+
+    .rummyVortex-online-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+.RummyZion-info-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 98%; /* Измените размер при необходимости */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.RummyZion-info-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.RummyZion-info-slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.RummyZion-info-slide-title {
+    font-size: 1.8em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.RummyZion-info-slide-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+    list-style: none;
+}
+
+.RummyZion-info-slider-container button {
+    background-color: #088e1838;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    height: 90%;
+    transition: background-color 0.3s;
+}
+
+.RummyZion-info-prev {
+    left: 10px;
+}
+
+.RummyZion-info-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .RummyZion-info-slide-title {
+        font-size: 1.5em;
+    }
+    
+    .RummyZion-info-slider-container button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
 
 
 
@@ -640,5 +1000,19 @@ body::-webkit-scrollbar-track {
     }
     .tournaments-card:hover {
         transform: scale(1.05);
+    }
+    .privacy-link:hover {
+        color: #e91e63;
+        text-decoration: underline;
+    }
+    .btn-hero:hover {
+        background-color: #e91e63;
+        transform: scale(1.05);
+    }
+    .skill-rummy__button:hover {
+        background-color: #e91e63;
+    }
+    .RummyZion-info-slider-container button:hover {
+        background-color: #088e187d;
     }
 }
