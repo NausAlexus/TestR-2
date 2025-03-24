@@ -611,7 +611,7 @@ body::-webkit-scrollbar-track {
 }
 
 .parallax-bg {
-    background-image: url('/img/home/hero-bg.jpg');
+    background-image: url('img/home/hero-bg.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -624,7 +624,7 @@ body::-webkit-scrollbar-track {
     z-index: 1;
 }
 .parallax-bg-2 {
-    background-image: url('/img/home/hero-bg-2.jpg');
+    background-image: url('img/home/hero-bg-2.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -638,7 +638,7 @@ body::-webkit-scrollbar-track {
 }
 
 .parallax-bg-3 {
-    background-image: url('/img/about/hero-bg-2.jpg');
+    background-image: url('img/about/hero-bg-3.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
