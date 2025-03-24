@@ -977,14 +977,6 @@ body::-webkit-scrollbar-track {
     }
 }
 
-
-
-
-
-
-
-
-
 .gam{
     display: flex; margin-top: 20px; align-items: center; gap: 10px; justify-content: center;
   }
@@ -1302,7 +1294,7 @@ body::-webkit-scrollbar-track {
   }
   
   /* Buttons */
-  button {
+  .how-play-content button {
     padding: 12px 25px;
     background-color: #0cb717;
     color: #fff;
@@ -1312,11 +1304,6 @@ body::-webkit-scrollbar-track {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #afd517;
-    transform: scale(1.05);
   }
   
   /* Responsive Styles */
@@ -1335,7 +1322,7 @@ body::-webkit-scrollbar-track {
   }
   
   @media (max-width: 480px) {
-    body {
+    .how-play-content {
       font-size: 14px;
     }
   
@@ -1379,6 +1366,13 @@ body::-webkit-scrollbar-track {
 
 
 
+  
+
+
+
+
+
+
 @media (min-width: 1025px) {
     .header-link:hover,
     .footer-brand:hover {
@@ -1407,4 +1401,8 @@ body::-webkit-scrollbar-track {
     .RummyZion-info-slider-container button:hover {
         background-color: #088e187d;
     }
+    .how-play-content button:hover {
+        background-color: #afd517;
+        transform: scale(1.05);
+      }
 }
