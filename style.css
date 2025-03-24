@@ -637,6 +637,20 @@ body::-webkit-scrollbar-track {
     z-index: 1;
 }
 
+.parallax-bg-3 {
+    background-image: url('/img/about/hero-bg-2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 .parallax-content {
     position: relative;
     z-index: 2;
@@ -1189,7 +1203,9 @@ body::-webkit-scrollbar-track {
     margin: 0;
   }
   
-  
+  .how-to-play-title {
+    color: #f4ff1a;
+  }
   
   .how-to-play-nav-link {
     display: block;
@@ -1486,20 +1502,85 @@ body::-webkit-scrollbar-track {
 
 
 
+.about-content {
+    margin-top: 50px;
+}
+.about-contacts-link {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #f4ff1a;
+    font-size: 28px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+.advantages-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 120px;
+}
 
+.advantages-title {
+    text-align: center;
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 30px;
+}
 
+.advantage-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
+.advantage-image {
+    width: 50%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 10px 10px 39px 0px rgba(241,255,106,0.75);
+    -webkit-box-shadow: 10px 10px 39px 0px rgba(241,255,106,0.75);
+    -moz-box-shadow: 10px 10px 39px 0px rgba(241,255,106,0.75);
+}
 
+.advantage-text {
+    width: 50%;
+    padding: 0 20px;
+}
 
+.advantage-subtitle {
+    font-size: 22px;
+    color: #f4ff1a;
+    margin-bottom: 10px;
+}
 
+.advantage-description {
+    font-size: 18px;
+    color: #ffffff;
+}
 
+@media (max-width: 768px) {
+    .advantages-section {
+        padding: 40px 20px;
+    }
+    .advantage-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .advantage-image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
+    .advantage-text {
+        width: 100%;
+        padding: 0;
+    }
 
-
-
-
-
+    .revers-text {
+        flex-direction: column-reverse;
+    }
+}
 
 @media (min-width: 1025px) {
     .header-link:hover,
@@ -1532,5 +1613,8 @@ body::-webkit-scrollbar-track {
     .how-play-content button:hover {
         background-color: #afd517;
         transform: scale(1.05);
-      }
+    }
+    .about-contacts-link:hover {
+        background-color: #bec70f;
+    }
 }
