@@ -707,7 +707,7 @@ body::-webkit-scrollbar-track {
 }
 
 .phone-input:focus {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(249, 249, 249, 0.747);
     outline: none;
 }
 
@@ -726,8 +726,7 @@ body::-webkit-scrollbar-track {
 /* Стили для контейнера согласия */
 .hero-flex-cont {
     display: flex;
-    align-items: center;
-    margin-top: 15px;
+    align-items: flex-end;
 }
 
 .checkbox {

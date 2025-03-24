@@ -64,21 +64,20 @@
             </div>
         </section>
         <section class="number-phone">
-            <div id="register" class="hero__form">
-                <input class="phone-input" name="phone" type="tel" placeholder="Enter your phone number" id="phoneInput">
-                <div class="error" id="phoneError"></div>
+            <form action="thanks_form.php" method="post" id="register" class="hero__form">
+                <input class="phone-input" name="phone" type="tel" placeholder="Enter your phone number" id="phoneInput" required>
         
-                <button type="button" id="registerBtn" class="btn-hero">Get OTP</button>
         
                 <div class="hero-flex-cont">
-                    <input type="checkbox" name="checkbox" id="saw" class="checkbox">
+                    <input type="checkbox" name="checkbox" id="saw" class="checkbox" required>
                     <p class="hero__note">
-                        By continuing, you agree to our 
+                        I agree to the 
                         <a href="privacy-policy/" class="privacy-link">Privacy &amp; Policy</a>.
                     </p>
                 </div>
-                <div class="error" id="checkboxError"></div>
-            </div>
+                <button type="submit" id="registerBtn" class="btn-hero" >Get OTP</button>
+
+            </form>
             <img src="img/home/phone-img.jpg" alt="tel" class="phone-image">
         </section>
         <section class="skill-rummy">
