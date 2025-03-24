@@ -933,7 +933,7 @@ body::-webkit-scrollbar-track {
     }
 }
 
-.RummyZion-info-slider-container {
+.RummyTourneyClub-info-slider-container {
     position: relative;
     width: 100%;
     max-width: 98%; /* Измените размер при необходимости */
@@ -944,25 +944,25 @@ body::-webkit-scrollbar-track {
     background-color: white;
 }
 
-.RummyZion-info-slider {
+.RummyTourneyClub-info-slider {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.RummyZion-info-slide {
+.RummyTourneyClub-info-slide {
     min-width: 100%;
     transition: opacity 0.5s ease;
     padding: 20px;
     text-align: center;
 }
 
-.RummyZion-info-slide-title {
+.RummyTourneyClub-info-slide-title {
     font-size: 1.8em;
     margin: 15px 0;
     color: #333;
 }
 
-.RummyZion-info-slide-text {
+.RummyTourneyClub-info-slide-text {
     font-size: 1em;
     color: #555;
     line-height: 1.6;
@@ -970,7 +970,7 @@ body::-webkit-scrollbar-track {
     list-style: none;
 }
 
-.RummyZion-info-slider-container button {
+.RummyTourneyClub-info-slider-container button {
     background-color: #088e1838;
     color: rgb(0, 0, 0);
     border: none;
@@ -985,20 +985,20 @@ body::-webkit-scrollbar-track {
     transition: background-color 0.3s;
 }
 
-.RummyZion-info-prev {
+.RummyTourneyClub-info-prev {
     left: 10px;
 }
 
-.RummyZion-info-next {
+.RummyTourneyClub-info-next {
     right: 10px;
 }
 
 @media (max-width: 768px) {
-    .RummyZion-info-slide-title {
+    .RummyTourneyClub-info-slide-title {
         font-size: 1.5em;
     }
     
-    .RummyZion-info-slider-container button {
+    .RummyTourneyClub-info-slider-container button {
         padding: 10px;
         font-size: 16px;
     }
@@ -1558,6 +1558,18 @@ body::-webkit-scrollbar-track {
     color: #ffffff;
 }
 
+@media (max-width: 1100px) {
+    .how-to-play-nav {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+}
+
+.imgHowtoPlay{
+    width: 100%;
+}
 @media (max-width: 768px) {
     .advantages-section {
         padding: 40px 20px;
@@ -1607,7 +1619,7 @@ body::-webkit-scrollbar-track {
     .skill-rummy__button:hover {
         background-color: #e91e63;
     }
-    .RummyZion-info-slider-container button:hover {
+    .RummyTourneyClub-info-slider-container button:hover {
         background-color: #088e187d;
     }
     .how-play-content button:hover {
@@ -1617,4 +1629,14 @@ body::-webkit-scrollbar-track {
     .about-contacts-link:hover {
         background-color: #bec70f;
     }
+}
+
+@media (max-width:426px) {
+    .header-link{
+        font-size: 18px;
+    }
+    .skill-rummy__title{
+        font-size: 1.5rem;
+    }
+    
 }
