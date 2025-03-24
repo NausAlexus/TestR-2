@@ -1,24 +1,28 @@
-let currentSlide = 0;
+let currentSlide3 = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.RummyZion-info-slide');
-    const totalSlides = slides.length;
+function showSlide2(index) {
+    const slides3 = document.querySelectorAll('.RummyZion-info-slide');
+    const totalSlides3 = slides3.length;
 
-    if (index >= totalSlides) {
-        currentSlide = 0;
+    if (index >= totalSlides3) {
+        currentSlide3 = 0;
     } else if (index < 0) {
-        currentSlide = totalSlides - 1;
+        currentSlide3 = totalSlides3 - 1;
     } else {
-        currentSlide = index;
+        currentSlide3 = index;
     }
 
-    const slider = document.querySelector('.RummyZion-info-slider');
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    const slider3 = document.querySelector('.RummyZion-info-slider');
+    slider3.style.transform = `translateX(-${currentSlide3 * 100}%)`;
 }
 
-function changeSlide(direction) {
-    showSlide(currentSlide + direction);
+function changeSlide2(direction) {
+    showSlide2(currentSlide3 + direction);
 }
+
+// Add event listeners to the buttons
+document.querySelector('.RummyZion-info-prev').addEventListener('click', () => changeSlide2(-1));
+document.querySelector('.RummyZion-info-next').addEventListener('click', () => changeSlide2(1));
 
 // Show the first slide on page load
-showSlide(currentSlide);
+showSlide2(currentSlide3);
